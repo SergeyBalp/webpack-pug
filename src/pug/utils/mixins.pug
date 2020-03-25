@@ -1,0 +1,19 @@
+mixin item(title, descr)
+  .item
+    h2.item-title= title
+    p.item-descr= descr
+
+
+mixin slide(src, active='')
+    div(class="carousel-item " + active)
+        img(src=src alt="...").d-block.w-100
+        
+
+mixin card(title, price, img)
+    .card
+        .card__img
+            img(src="/assets/img/products/" + img , alt = title)
+        .card__title
+            | #{title}
+        .card__price
+            | #{price}

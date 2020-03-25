@@ -1,0 +1,41 @@
+include ../utils/mixins
+
+block variables
+
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title #{title}
+    meta(name="description", content=description)
+
+    block head
+
+    block links
+
+  body(class=pageClass)
+    .wrapper
+
+        include ../includes/modules/header
+
+        .content-wrapper
+
+          block content
+            section.jumborton.text-center
+              .container
+                h1 #{myTitle}
+                h3 #{myDescr}
+                p
+                | Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil vel placeat nam nostrum, quasi molestias ratione ad voluptas consequatur fugiat! Dolores nulla perferendis quibusdam unde repudiandae eveniet soluta laborum quia.
+                .picture.mt-5.mb-5   
+                  img(src="/assets/img/placeimg_640_480.jpg")
+
+
+                a.btn.btn-primary(href="#") Main call to action
+                a.btn.btn-secondary(href="#") Secondary action
+
+
+
+        include ../includes/modules/footer
+
+    block script
